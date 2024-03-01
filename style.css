@@ -22,7 +22,7 @@ body::before{
     background: url("Images/overlay.jpg"), #0b0b0b;
     background-repeat: no-repeat;
     background-size: cover;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
