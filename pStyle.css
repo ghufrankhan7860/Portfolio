@@ -46,6 +46,8 @@ body::before{
     transform: scale(0.5,0.5);
 }
 
+
+
 .main-section{
     display: flex;
     justify-content: center;
@@ -79,24 +81,40 @@ body::before{
 }
 
 .docs-block{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 270.4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
+
 }
 
 .vid-item{
     width: 480px;
-    height: 270.4px;
+    height: 270px;
     background-color: snow;
+    border-radius: 10px;
 }
 
 
+@media(max-width:500px){
 
+    #mainheading{
+        font-size: 20px;
+    }
+    #home-btn{
+        margin-top: 0;
+        transform: scale(0.5, 0.5);
+    }
 
+    .sec h3{
+        max-width: 350px;
+        font-size: 22px;
+    }
+    
 
-@media (max-width: 1000px) {
-    .docs-block {
-        grid-template-columns: 1fr; /* Change to a single column for smaller screens */
+    .vid-item{
+        width: 340px;
+        height: 191.25px;
     }
 }

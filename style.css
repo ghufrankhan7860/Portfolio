@@ -9,19 +9,38 @@
   }
 
 
+.align-t{
+    text-align: center;
+    text-transform:uppercase;
+}
+
+.flx-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flx-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* elements css from here */
 *{
     margin: 0;
     padding: 0;
     font-family: 'sora', 'arial', 'sans-serif';
 }
+
 body{
     background-color: #050505;
 }
 body::before{
     content: "";
-    background: url("Images/overlay.jpg"), #0b0b0b;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url("Images/overlay.jpg") center/cover no-repeat, #0b0b0b ;
     position: fixed;
     top: 0;
     left: 0;
@@ -30,51 +49,44 @@ body::before{
     z-index: -1;
     background-blend-mode: color-burn;
 }
-.mainPage{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 150px;
+
+.pg{
+    
+}
+
+#main-sec{
+    margin-bottom: 200px;
+    width: 80rem;
 }
 
 /* VideoEditor & Motion Graphic */
-#heditor{
-    text-align: center;
-    text-transform:uppercase;
-    letter-spacing: 0.05rem;
+#ed-head{
+    letter-spacing: 0.1rem;
     font-size: 24px;
-    font-weight:900;
-    padding: 10px;
+    font-weight:700;
+    padding: 15px;
     color: white;
 }
 
 #brandlogo{
-    width: 560px;
+    width: 520px;
 }
 
 
-.pagesButton{
-    width: 600px;
-    display: flex;
-    margin: 44px 0 44px 0;
-    flex-direction: row;
-    justify-content: space-around;
-    
+.btns{
+    width: 50%;
+    margin: 0 0 44px 0;
 }
 
 .btn{
     text-decoration: none;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    font-size: 11px;
-    padding: 25px;
-    padding-left: 40px;
-    padding-right: 40px;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.275rem;
+    padding: 25px 40px;
     color: white;
-    background-image: linear-gradient(-32deg, #1f1f1f, #0a0a0a,#0a0a0a);
     border-radius: 30px;
+    background-image: linear-gradient(-32deg, #1f1f1f, #0a0a0a,#0a0a0a);
     transition: transform 0.4s ease-out;
     /* Apply animation on hover */
     &:hover {
@@ -94,22 +106,15 @@ body::before{
 .btn:active{
     box-shadow: 1px 1px 2px #a0a0a0;
 }
+
 footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between ;
-    align-items: center;
+    width: 80rem;
     color: white;
 }
 
-#aboutPara{
-    text-align: center;
-    line-height: 1.75rem;
-}
 
 
-#aboutMe{
-    text-transform: uppercase;
+#abt-me{
     letter-spacing: 0.1rem;
     font-weight: 100;
     font-size: 24px;
@@ -118,19 +123,20 @@ footer{
 
 }
 
-#editorName{
-    text-transform: uppercase;
+#ed-name{
     font-size: 52px;
     font-weight: 300;
     margin: 48px 0px;
 }
 
-#aboutPara{
+#abt-para{
     font-size: 20px;
+    text-align: center;
+    line-height: 3rem;
     font-weight: 100;
-    padding: 0 98px;
-    margin: 48px 0px;
+    opacity: 0.9;
 }
+
 
 footer .btn {
     margin-top: 30px;
@@ -138,6 +144,48 @@ footer .btn {
 
 #contactMail{
     font-weight: 100;
-    opacity: 50%;
     margin-bottom: 120px;
+    opacity: 50%;
+}
+
+
+@media(max-width:780px ){
+    body::before{
+        background: url("Images/vOverlay.jpg") center/cover no-repeat, #0b0b0b;
+        background-blend-mode: color-burn;
+    }
+    .pg{
+        width: 100vw;
+
+    }
+    #main-sec{
+        width: 100%;
+    }
+
+    #ed-head{
+        font-size: 18px;
+        padding-top: 0;
+        line-height: 3rem;
+    }
+
+    #brandlogo{
+        width: 360px;
+    }
+
+    .btns{
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .btn{
+        font-size: 10px;
+        font-weight: 300;
+        margin: 8px 0px;
+    }
+    footer{
+        width: 100%;
+        text-align: center;
+    }
+
+
 }
