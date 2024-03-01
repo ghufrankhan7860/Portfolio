@@ -150,10 +150,7 @@ footer .btn {
 
 
 @media(max-width:780px ){
-    body::before{
-        background: url("Images/vOverlay.jpg") center/cover no-repeat, #0b0b0b;
-        background-blend-mode: color-burn;
-    }
+
     .pg{
         width: 100vw;
 
