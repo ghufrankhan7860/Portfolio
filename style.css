@@ -56,7 +56,7 @@ body::before{
 
 #main-sec{
     margin-bottom: 200px;
-    width: 80rem;
+    width: 80%;
 }
 
 /* VideoEditor & Motion Graphic */
@@ -74,8 +74,8 @@ body::before{
 
 
 .btns{
-    width: 50%;
-    margin: 0 0 44px 0;
+    width: 70%;
+    margin: 0 20px 44px 20px;
 }
 
 .btn{
@@ -108,7 +108,7 @@ body::before{
 }
 
 footer{
-    width: 80rem;
+    width: 80%;
     color: white;
 }
 
@@ -149,7 +149,7 @@ footer .btn {
 }
 
 
-@media(max-width:780px ){
+@media(max-width:600px){
 
     .pg{
         width: 100vw;
@@ -171,7 +171,7 @@ footer .btn {
 
     .btns{
         flex-direction: column;
-        width: 95%;
+        width: 90%;
     }
 
     .btn{
@@ -185,4 +185,10 @@ footer .btn {
     }
 
 
+}
+
+@media(min-width:1200px){
+    .btns{
+        width: 50%;
+    }
 }
