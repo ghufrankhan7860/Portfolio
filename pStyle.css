@@ -79,6 +79,7 @@ body::before{
     align-items: center;
     border: 5px dashed #111111;
     margin-bottom:20px;
+    padding: 20px 0;
     border-radius: 20px;
 }
 
