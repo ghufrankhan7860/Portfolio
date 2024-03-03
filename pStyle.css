@@ -168,4 +168,9 @@ body::before{
         width: 340px;
         height: 191.25px;
     }
+
+    iframe{
+        width: 340px;
+        height: 191.25px;
+    }
 }
