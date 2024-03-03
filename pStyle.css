@@ -113,6 +113,10 @@ body::before{
     transition: transform 0.4s ease-out;
 }
 
+iframe{
+    border-radius: 10px;
+}
+
 @keyframes zoomIn{
     from{
         transform: scale(100%);
@@ -167,10 +171,12 @@ body::before{
     .vid-item{
         width: 340px;
         height: 191.25px;
+        border-radius: 15px;
     }
 
     iframe{
         width: 340px;
         height: 191.25px;
+        border-radius: 15px;
     }
 }
