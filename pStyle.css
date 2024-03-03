@@ -73,10 +73,13 @@ body::before{
 }
 
 .sec{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    border: 5px dashed #111111;
+    margin-bottom:20px;
+    border-radius: 20px;
 }
 
 .sec h3{
