@@ -37,13 +37,21 @@ body::before{
 }
 
 #home-btn{
-    background-image:url("Images/home.png");
+    background-image:url("Images/home1.png");
     background-position: contain;
     background-repeat: no-repeat;
     height:50px;
     width: 50px;
     margin: 10px 20px;
-    transform: scale(0.5,0.5);
+    /* transform: scale(0.5,0.5); */
+    animation: popOut 0.4s forwards;
+    transition: transform 0.2s ease-in;
+}
+
+#home-btn:hover{
+    /* transform: scale(0.5,0.5); */
+    animation: popIn 0.4s forwards;
+    transition: transform 0.2s ease-out;
 }
 
 
@@ -94,6 +102,46 @@ body::before{
     height: 270px;
     background-color: snow;
     border-radius: 10px;
+    animation: zoomOut 0.9s forwards;
+    transition: transform 0.4s ease-in;
+}
+.vid-item:hover{
+    animation: zoomIn 0.9s forwards;
+    transition: transform 0.4s ease-out;
+}
+
+@keyframes zoomIn{
+    from{
+        transform: scale(100%);
+    }
+    to{
+        transform: scale(103%);
+    }   
+}
+@keyframes zoomOut{
+    from{
+        transform: scale(103%);
+    }
+    to{
+        transform: scale(100%);
+    }   
+}
+
+@keyframes popOut{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(8px);
+    }
+}
+@keyframes popIn{
+    from{
+        transform: translateY(8px);
+    }
+    to{
+        transform: translateY(0);
+    }
 }
 
 
